@@ -1,4 +1,3 @@
-
 // Available commands and their responses
 const commands = {
   help: () => {
@@ -124,7 +123,7 @@ const commands = {
   },
 
   clear: () => {
-    // This command is handled separately in the Terminal component
+    // Return a special signal that will be handled by the Terminal component
     return 'CLEAR_TERMINAL';
   },
 
@@ -160,14 +159,7 @@ export const handleCommand = (input) => {
   
   // Check if command exists
   if (commands[command]) {
-    const response = commands[command]();
-    
-    // Special case for clear command
-    if (response === 'CLEAR_TERMINAL') {
-      return ''; // This is handled in the Terminal component
-    }
-    
-    return response;
+    return commands[command]();
   }
   
   // Handle unknown commands

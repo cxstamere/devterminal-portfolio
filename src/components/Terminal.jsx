@@ -18,8 +18,14 @@ const Terminal = () => {
     // Process command and get response
     const response = handleCommand(cmd);
     
-    // Add response to history
-    setHistory(prev => [...prev, { text: response, type: 'response' }]);
+    // Check if it's the clear command
+    if (cmd.trim().toLowerCase() === 'clear') {
+      // Clear the terminal
+      setHistory([]);
+    } else {
+      // Add response to history
+      setHistory(prev => [...prev, { text: response, type: 'response' }]);
+    }
     
     // Clear input
     setInput('');
