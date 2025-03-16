@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">about</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=></span> {`{`}</h2>
+        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">about</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=&gt;</span> {'{'}</h2>
         
         <div className="about-content">
           <div>

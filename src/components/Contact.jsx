@@ -56,7 +56,7 @@ const Contact = () => {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">contact</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=></span> {`{`}</h2>
+        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">contact</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=&gt;</span> {'{'}</h2>
         
         <div className="contact-form">
           <p className="comment">// Fill out the form below to get in touch with me</p>
@@ -127,7 +127,7 @@ const Contact = () => {
           
           <div style={{ marginTop: '40px' }}>
             <p>
-              <span className="keyword">const</span> <span className="variable">directContact</span> = {`{`}
+              <span className="keyword">const</span> <span className="variable">directContact</span> = {'{'}
             </p>
             <p style={{ marginLeft: '20px' }}>
               <span className="string">"email"</span>: <span className="string">"johndoe@example.com"</span>,
@@ -135,7 +135,7 @@ const Contact = () => {
             <p style={{ marginLeft: '20px' }}>
               <span className="string">"phone"</span>: <span className="string">"+1 (555) 123-4567"</span>
             </p>
-            <p>{`}`};</p>
+            <p>{'}'}</p>
           </div>
         </div>
       </div>

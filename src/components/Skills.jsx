@@ -28,7 +28,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section">
       <div className="container">
-        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">skills</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=></span> {`{`}</h2>
+        <h2 className="section-title"><span className="keyword">const</span> <span className="variable">skills</span> <span className="operator">=</span> <span className="function">()</span> <span className="operator">=&gt;</span> {'{'}</h2>
         
         <div className="skills-container">
           {skillCategories.map((category, index) => (
