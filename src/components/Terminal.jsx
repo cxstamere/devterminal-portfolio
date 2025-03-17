@@ -25,6 +25,23 @@ const Terminal = () => {
     } else {
       // Add response to history
       setHistory(prev => [...prev, { text: response, type: 'response' }]);
+      
+      // Execute any script in the response (for the resume download)
+      if (cmd.trim().toLowerCase() === 'resume') {
+        setTimeout(() => {
+          try {
+            const resumeLink = "https://drive.google.com/uc?export=download&id=1234567890abcdef";
+            const a = document.createElement("a");
+            a.href = resumeLink;
+            a.download = "john_doe_resume.pdf";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          } catch (error) {
+            console.error("Error downloading resume:", error);
+          }
+        }, 500);
+      }
     }
     
     // Clear input

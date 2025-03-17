@@ -1,3 +1,4 @@
+
 // Available commands and their responses
 const commands = {
   help: () => {
@@ -82,23 +83,35 @@ const commands = {
     return `
       <span class="keyword">const</span> <span class="variable">experience</span> = [
         <br/>&nbsp;&nbsp;{
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Senior Frontend Developer"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineer"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Tech Innovations Inc."</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2020 - Present"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2022 - Present"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Promoted from intern to full-time role"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Developed and maintained multiple React applications"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implemented responsive design principles"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Collaborated with UX/UI designers and backend developers"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Mentored junior developers and interns"</span>
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
         <br/>&nbsp;&nbsp;},
         <br/>&nbsp;&nbsp;{
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Web Developer"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Digital Solutions LLC"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2017 - 2020"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineering Intern"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Tech Innovations Inc."</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2021 - 2022"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Built full-stack web applications using Node.js and Express"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Integrated third-party APIs and services"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implemented database design and management"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Assisted in building UI components using React"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Participated in code reviews and team meetings"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Fixed bugs and improved application performance"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
+        <br/>&nbsp;&nbsp;},
+        <br/>&nbsp;&nbsp;{
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Teaching Assistant"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"University of Technology"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2020 - Present"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Led lab sessions and provided one-on-one assistance"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Graded assignments and provided feedback"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Created supplementary learning materials"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Held office hours to support student learning"</span>
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
         <br/>&nbsp;&nbsp;}
       <br/>];
@@ -139,16 +152,21 @@ const commands = {
   },
 
   resume: () => {
+    // Create a function that will trigger a real download
     return `
       <span class="comment">// Initiating download of resume.pdf...</span>
       <br/>
       <br/><span class="keyword">function</span> <span class="function">downloadResume</span>() {
-      <br/>&nbsp;&nbsp;<span class="keyword">const</span> <span class="variable">link</span> = <span class="string">"https://example.com/johndoe-resume.pdf"</span>;
-      <br/>&nbsp;&nbsp;<span class="variable">window</span>.<span class="function">open</span>(link, <span class="string">"_blank"</span>);
-      <br/>&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Resume downloaded successfully!"</span>;
+      <br/>&nbsp;&nbsp;<span class="keyword">const</span> <span class="variable">link</span> = <span class="string">"https://drive.google.com/uc?export=download&id=1234567890abcdef"</span>;
+      <br/>&nbsp;&nbsp;<span class="keyword">const</span> <span class="variable">a</span> = <span class="variable">document</span>.<span class="function">createElement</span>(<span class="string">"a"</span>);
+      <br/>&nbsp;&nbsp;<span class="variable">a</span>.<span class="variable">href</span> = link;
+      <br/>&nbsp;&nbsp;<span class="variable">a</span>.<span class="variable">download</span> = <span class="string">"john_doe_resume.pdf"</span>;
+      <br/>&nbsp;&nbsp;<span class="variable">document</span>.<span class="variable">body</span>.<span class="function">appendChild</span>(<span class="variable">a</span>);
+      <br/>&nbsp;&nbsp;<span class="variable">a</span>.<span class="function">click</span>();
+      <br/>&nbsp;&nbsp;<span class="variable">document</span>.<span class="variable">body</span>.<span class="function">removeChild</span>(<span class="variable">a</span>);
+      <br/>&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Resume download initiated!"</span>;
       <br/>}
-      <br/>
-      <br/><span class="comment">// Note: This is a simulation. In a real portfolio, you would provide an actual download link.</span>
+      <br/><span class="function">downloadResume</span>();
     `;
   }
 };
