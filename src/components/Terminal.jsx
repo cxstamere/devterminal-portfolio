@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { handleCommand } from '../utils/terminalCommands';
 
@@ -29,13 +28,9 @@ const Terminal = () => {
     if (cmd.trim().toLowerCase() === 'resume') {
       // Execute any inline script that might be in the HTML response
       setTimeout(() => {
-        const scriptContent = response.match(/downloadResume\(\);/);
-        if (scriptContent) {
-          // Extract the Google Drive URL and open it
-          const urlMatch = response.match(/const link = "(.*?)"/);
-          if (urlMatch && urlMatch[1]) {
-            window.open(urlMatch[1], '_blank');
-          }
+        const urlMatch = response.match(/const link = "(.*?)"/);
+        if (urlMatch && urlMatch[1]) {
+          window.open(urlMatch[1], '_blank');
         }
       }, 500);
     }

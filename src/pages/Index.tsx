@@ -1,54 +1,27 @@
 
-import React, { useEffect } from 'react';
-import Navbar from '../components/Navbar';
-import About from '../components/About';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
-import Contact from '../components/Contact';
+import React from "react";
+import Navbar from "../components/Navbar";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Experience from "../components/Experience";
+import Contact from "../components/Contact";
+import Terminal from "../components/Terminal";
 
 const Index = () => {
-  useEffect(() => {
-    // Scroll to hash element on load if URL contains hash
-    if (window.location.hash) {
-      const hash = window.location.hash;
-      setTimeout(() => {
-        const element = document.querySelector(hash);
-        if (element) {
-          element.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      }, 300);
-    }
-  }, []);
-
   return (
-    <div className="portfolio-app">
+    <div className="min-h-screen">
       <Navbar />
-      
       <main>
         <About />
         <Skills />
+        <Experience />
         <Projects />
         <Contact />
       </main>
-      
-      <footer className="footer">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-text">
-              <p>© 2023 Developer Portfolio. All rights reserved.</p>
-            </div>
-            
-            <div className="footer-links">
-              <a href="https://github.com" className="footer-link" target="_blank" rel="noreferrer">GitHub</a>
-              <a href="https://linkedin.com" className="footer-link" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://twitter.com" className="footer-link" target="_blank" rel="noreferrer">Twitter</a>
-              <a href="mailto:johndoe@example.com" className="footer-link">Email</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <div className="fixed bottom-4 right-4 w-4/5 md:w-2/3 lg:w-1/2 xl:w-1/3 h-96">
+        <Terminal />
+      </div>
     </div>
   );
 };
