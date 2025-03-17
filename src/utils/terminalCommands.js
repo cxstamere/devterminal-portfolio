@@ -1,4 +1,3 @@
-
 // Available commands and their responses
 const commands = {
   help: () => {
@@ -83,34 +82,23 @@ const commands = {
     return `
       <span class="keyword">const</span> <span class="variable">experience</span> = [
         <br/>&nbsp;&nbsp;{
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineer"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Innovate Tech Solutions"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"June 2022 - Present"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Senior Frontend Developer"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Tech Innovations Inc."</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2020 - Present"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Lead development of React-based client dashboard"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implement microservices using Node.js and Docker"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Mentor junior developers and provide code reviews"</span>
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;],
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"note"</span>: <span class="string">"Promoted from internship to full-time role"</span>
-        <br/>&nbsp;&nbsp;},
-        <br/>&nbsp;&nbsp;{
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineering Intern"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Innovate Tech Solutions"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"January 2022 - June 2022"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Developed UI components using React and Tailwind CSS"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Integrated REST APIs and implemented Redux state management"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Participated in agile development processes"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Developed and maintained multiple React applications"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implemented responsive design principles"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Collaborated with UX/UI designers and backend developers"</span>
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
         <br/>&nbsp;&nbsp;},
         <br/>&nbsp;&nbsp;{
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Teaching Assistant - Web Development"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"University of Technology"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"September 2021 - December 2022"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Web Developer"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Digital Solutions LLC"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2017 - 2020"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Led lab sessions on HTML, CSS, JavaScript, and React"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Provided mentoring during office hours"</span>,
-        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Created learning materials and coding challenges"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Built full-stack web applications using Node.js and Express"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Integrated third-party APIs and services"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Implemented database design and management"</span>
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
         <br/>&nbsp;&nbsp;}
       <br/>];
