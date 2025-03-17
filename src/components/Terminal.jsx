@@ -18,14 +18,30 @@ const Terminal = () => {
     // Process command and get response
     const response = handleCommand(cmd);
     
-    // Check if it's the clear command
-    if (cmd.trim().toLowerCase() === 'clear') {
+    // Handle special clear command
+    if (response === 'CLEAR_TERMINAL') {
       // Clear the terminal
       setHistory([]);
-    } else {
-      // Add response to history
-      setHistory(prev => [...prev, { text: response, type: 'response' }]);
+      return;
     }
+    
+    // Handle resume download execution
+    if (cmd.trim().toLowerCase() === 'resume') {
+      // Execute any inline script that might be in the HTML response
+      setTimeout(() => {
+        const scriptContent = response.match(/downloadResume\(\);/);
+        if (scriptContent) {
+          // Extract the Google Drive URL and open it
+          const urlMatch = response.match(/const link = "(.*?)"/);
+          if (urlMatch && urlMatch[1]) {
+            window.open(urlMatch[1], '_blank');
+          }
+        }
+      }, 500);
+    }
+    
+    // Add response to history
+    setHistory(prev => [...prev, { text: response, type: 'response' }]);
     
     // Clear input
     setInput('');

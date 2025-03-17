@@ -1,3 +1,4 @@
+
 // Available commands and their responses
 const commands = {
   help: () => {
@@ -92,6 +93,38 @@ const commands = {
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
         <br/>&nbsp;&nbsp;},
         <br/>&nbsp;&nbsp;{
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineer"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Innovative Solutions Ltd."</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2022 - Present"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Promoted from internship to full-time role after demonstrating strong technical aptitude"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Designed and implemented microservices architecture for high-traffic applications"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Mentored junior developers and conducted code reviews"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Reduced API response times by 40% through optimized database queries"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
+        <br/>&nbsp;&nbsp;},
+        <br/>&nbsp;&nbsp;{
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Software Engineering Intern"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Innovative Solutions Ltd."</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2021 - 2022"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Developed backend APIs using Node.js and Express"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Created automated testing suites with Jest"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Contributed to an open-source library for data visualization"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
+        <br/>&nbsp;&nbsp;},
+        <br/>&nbsp;&nbsp;{
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Teaching Assistant, Computer Science Dept."</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"University of Technology"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2019 - 2021"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"responsibilities"</span>: [
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Assisted professor in teaching Advanced Algorithms and Data Structures course"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Conducted weekly lab sessions and office hours for 80+ students"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Graded assignments and provided detailed feedback to improve student understanding"</span>,
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Created supplementary learning materials and coding exercises"</span>
+        <br/>&nbsp;&nbsp;&nbsp;&nbsp;]
+        <br/>&nbsp;&nbsp;},
+        <br/>&nbsp;&nbsp;{
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"position"</span>: <span class="string">"Web Developer"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"company"</span>: <span class="string">"Digital Solutions LLC"</span>,
         <br/>&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"duration"</span>: <span class="string">"2017 - 2020"</span>,
@@ -143,12 +176,13 @@ const commands = {
       <span class="comment">// Initiating download of resume.pdf...</span>
       <br/>
       <br/><span class="keyword">function</span> <span class="function">downloadResume</span>() {
-      <br/>&nbsp;&nbsp;<span class="keyword">const</span> <span class="variable">link</span> = <span class="string">"https://example.com/johndoe-resume.pdf"</span>;
+      <br/>&nbsp;&nbsp;<span class="keyword">const</span> <span class="variable">link</span> = <span class="string">"https://drive.google.com/uc?export=download&id=1234567890abcdefghijklmnopqrstuvwxyz"</span>;
       <br/>&nbsp;&nbsp;<span class="variable">window</span>.<span class="function">open</span>(link, <span class="string">"_blank"</span>);
-      <br/>&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Resume downloaded successfully!"</span>;
+      <br/>&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Resume download initiated from Google Drive!"</span>;
       <br/>}
       <br/>
-      <br/><span class="comment">// Note: This is a simulation. In a real portfolio, you would provide an actual download link.</span>
+      <br/><span class="comment">// Executing download function</span>
+      <br/><span class="variable">downloadResume</span>();
     `;
   }
 };
